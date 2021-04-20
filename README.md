@@ -2,7 +2,7 @@
 This project tries to implement a simple state management frontend for an async state machine API.
 
 ### API Setup
-  - make sure that Golang ins installed
+  - make sure that Golang is installed
   - ```cd api && go run .```
 
 ### React App Setup

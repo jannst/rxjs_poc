@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 
+import ArmPositions from "./components/ArmPositions";
+import ProcessOverview from "./components/ProcessOverview";
+import ProcessDetails from "./components/ProcessDetails";
+import AddProcess from "./components/AddProcess";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="Sidebar">
+                <div>
+                    <ArmPositions/>
+                    <ProcessOverview/>
+                </div>
+                <div>
+                    <AddProcess/>
+                </div>
+            </div>
+            <div className="Content">
+                <ProcessDetails/>
+            </div>
+
+        </div>
+    );
 }
 
 export default App;
