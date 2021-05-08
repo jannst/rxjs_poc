@@ -4,10 +4,12 @@ import ArmPositions from "./components/ArmPositions";
 import ProcessOverview from "./components/ProcessOverview";
 import ProcessDetails from "./components/ProcessDetails";
 import AddProcess from "./components/AddProcess";
+import {Grommet} from "grommet";
+import {theme} from "./theme"
 
 function App() {
     return (
-        <div className="App">
+        <Grommet theme={theme}>
             <div className="Sidebar">
                 <div>
                     <ArmPositions/>
@@ -20,8 +22,7 @@ function App() {
             <div className="Content">
                 <ProcessDetails/>
             </div>
-
-        </div>
+        </Grommet>
     );
 }
 
