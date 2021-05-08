@@ -1,42 +1,9 @@
+import {useSelector} from "react-redux";
+
 function ProcessOverview() {
 
-    const processes = {
-        "1": {
-            "name": "test",
-            "state": "RUNNING",
-            "current_action": "adding oil",
-            "num_current_state": 70,
-            "num_states": 100
-        },
-        "2": {
-            "name": "test",
-            "state": "TERMINATED",
-            "current_action": "adding rice",
-            "num_current_state": 12,
-            "num_states": 1000
-        },
-        "3": {
-            "name": "test",
-            "state": "RUNNING",
-            "current_action": "adding eggs",
-            "num_current_state": 42,
-            "num_states": 10000
-        },
-        "4": {
-            "name": "test",
-            "state": "RUNNING",
-            "current_action": "adding eggs",
-            "num_current_state": 40,
-            "num_states": 7734
-        },
-        "5": {
-            "name": "Fast Process",
-            "state": "FINISHED",
-            "current_action": "",
-            "num_current_state": 10,
-            "num_states": 10
-        }
-    }
+    const selectProcesses = state => state.processes
+    const processes = useSelector(selectProcesses)
 
     return (
         <>

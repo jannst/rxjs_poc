@@ -1,12 +1,9 @@
 import {Tag} from "@blueprintjs/core";
+import {useSelector} from "react-redux";
 
 function ArmPositions() {
 
-    const armPositions = {
-        "left_arm": "HOME",
-        "middle_arm": "HOME",
-        "right_arm": "HOME"
-    };
+    const armPositions = useSelector(state => state.arm_positions)
 
     return (
         <>
