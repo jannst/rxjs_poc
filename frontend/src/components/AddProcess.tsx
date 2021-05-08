@@ -1,12 +1,8 @@
 import {Button, InputGroup} from "@blueprintjs/core";
-import {useDispatch} from "react-redux";
 import {useState} from "react";
-import {ADD_PROCESS} from "../reducers/processesReducer";
+import React from "react";
 
 function AddProcess() {
-
-    const dispatch = useDispatch();
-
     const [numAction, setNumActions] = useState(40);
     const [processName, setProcessName] = useState("Test Proc")
 
@@ -17,7 +13,7 @@ function AddProcess() {
                 <InputGroup
                     className="marginBottom"
                     placeholder="Number of actions"
-                    value={numAction}
+                    value={String(numAction)}
                     onChange={(e) => {
                         let data = parseInt(e.target.value);
                         if (!isNaN(data)) {
@@ -31,12 +27,7 @@ function AddProcess() {
                     value={processName}
                     onChange={(e) => setProcessName(e.target.value)}
                 />
-                <Button
-                    onClick={() => dispatch({
-                        type: ADD_PROCESS,
-                        payload: {name: processName, num_states: numAction}
-                    })}
-                >
+                <Button>
                     Add Process
                 </Button>
             </div>

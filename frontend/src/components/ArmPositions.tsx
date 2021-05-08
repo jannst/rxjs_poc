@@ -1,9 +1,14 @@
 import {Tag} from "@blueprintjs/core";
-import {useSelector} from "react-redux";
+import {ArmPositionsState} from "../client/ApiClient";
+import React from "react";
 
 function ArmPositions() {
 
-    const armPositions = useSelector(state => state.arm_positions)
+    const armPositions: ArmPositionsState = {
+        "left_arm": "HOME",
+        "middle_arm": "TOP",
+        "right_arm": "HOME"
+    };
 
     return (
         <>
@@ -13,7 +18,7 @@ function ArmPositions() {
     );
 }
 
-function ArmTag([key, value]) {
+function ArmTag([key, value]: string[]) {
     return (
         <Tag large round fill className="marginBottom">
             <div className="SpacedText">
