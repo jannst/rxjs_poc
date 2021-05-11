@@ -1,31 +1,31 @@
 import './App.css';
 
+/*
 import ArmPositions from "./components/ArmPositions";
 import ProcessOverview from "./components/ProcessOverview";
 import ProcessDetails from "./components/ProcessDetails";
 import AddProcess from "./components/AddProcess";
-import {Box, Grommet} from "grommet";
-import {theme} from "./theme"
-import {AppBar} from "./components/AppBar";
+
+ */
+import {Grid} from "./components/base/BaseComponents";
+import {ThemeProvider} from 'styled-components'
+import {theme} from "./theme";
+
+/*
+            <div style={{width:"100vw", height:"100vh"}}>
+                <BaseComponents color="brand" bg="primary" width={{xsm:1, sm:1/2, md:1/4, lg:1/5, xl:1/6}} height="40vh">
+                </BaseComponents>
+            </div>
+ */
 
 function App() {
     return (
-        <Grommet theme={theme}>
-            <AppBar><h1>Das is n test braa</h1></AppBar>
+        <ThemeProvider theme={theme}>
+            <Grid gridRowGap={4}>
 
-{/*            <div className="Sidebar">
-                <div>
-                    <ArmPositions/>
-                    <ProcessOverview/>
-                </div>
-                <div>
-                    <AddProcess/>
-                </div>
-            </div>
-            <div className="Content">
-                <ProcessDetails/>
-            </div>*/}
-        </Grommet>
+            </Grid>
+
+        </ThemeProvider>
     );
 }
 
